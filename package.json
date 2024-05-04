@@ -1,0 +1,21 @@
+{
+  "name": "master_backend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^5.13.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.13.0",
+    "@vinejs/vine": "^2.0.0",
+    "express": "^4.19.2"
+  }
+}
