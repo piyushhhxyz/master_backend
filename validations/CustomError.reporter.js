@@ -1,10 +1,18 @@
 import { errors } from '@vinejs/vine'
 
-export class CustomErrorReporter {   
+
+export class CustomErrorReporter{
   hasErrors = false
-  errors= {}
-  report( message, rule, field, meta ) {
-    this.errors[field.wildCardPath] = message
+  errors = {}
+
+  report(
+    message,
+    rule,
+    field,
+    meta
+  ) {
+    this.hasErrors = true
+    this.errors[field.wildCardPath] = message 
   }
   createError() {
     return new errors.E_VALIDATION_ERROR(this.errors)
